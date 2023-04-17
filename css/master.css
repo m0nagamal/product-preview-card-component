@@ -1,0 +1,133 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .box {
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    overflow: hidden;
+    background-color: white;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin: 20px 20px;
+}
+
+main .box figure {
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    main .box {
+        grid-template-columns: minmax(330px, 1fr);
+    }
+    main .box figure {
+        background-image: url(../images/image-product-mobile.jpg);
+        background-size: cover;
+        min-height: 245px;
+    }
+}
+
+main .box section {
+    padding: 35px;
+}
+
+main .box section p.type {
+    font-size: 18px;
+    color: hsl(212, 21%, 14%);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    font-size: 16px;
+}
+
+main .box section h1 {
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+main .box section p {
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+main .box section .price {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+main .box section .price span {
+    display: block;
+}
+
+main .box section .price span:first-child {
+    font-family: 'Fraunces', serif;
+    font-size: 40px;
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+}
+
+main .box section .price span:last-child {
+    font-size: 18px;
+    color: hsl(228, 12%, 48%);
+    opacity: 0.8;
+    font-weight: 700;
+    text-decoration: line-through;
+}
+
+main .box section button {
+    width: 100%;
+    color: white;
+    padding: 15px;
+    background-color: hsl(158, 36%, 37%);
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+main .box section button img {
+    margin-right: 15px;
+}
+
+main .box section button:hover {
+    cursor: pointer;
+    background-color: hsl(158, 42%, 22%);
+}
